@@ -1,0 +1,47 @@
+/* Animaciones de la landing Masterclass FantuLash.
+   Solo se activan cuando anim.js añade la clase .anim al <html>
+   (si el JS no carga, o la persona pidió reducir movimiento, todo se ve quieto). */
+
+:root { --fl-ease: cubic-bezier(.2, .7, .2, 1); }
+
+/* Header: se asienta con una sombra suave al hacer scroll */
+header { transition: box-shadow .4s ease; }
+header.is-scrolled { box-shadow: 0 10px 30px -20px rgba(42, 34, 30, .45); }
+
+/* Entrada genérica al hacer scroll */
+.anim .rv { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--fl-ease), transform .9s var(--fl-ease); }
+.anim .rv.in { opacity: 1; transform: none; }
+
+/* Hero: el título entra palabra por palabra */
+.anim h1 .w { display: inline-block; opacity: 0; transform: translateY(.4em); transition: opacity .8s ease, transform 1s var(--fl-ease); }
+.anim h1.in .w { opacity: 1; transform: none; }
+
+/* Hero: líneas de mapeo y etiquetas de la ceja */
+.anim .brow line, .anim .brow text { opacity: 0; transition: opacity 1.2s ease .3s; }
+.anim .brow.in line, .anim .brow.in text { opacity: 1; }
+
+/* Hero: la foto aparece desde abajo dentro del arco */
+.anim .reveal-arch img { clip-path: inset(100% 0 0 0); transform: scale(1.08); transition: clip-path 1.5s cubic-bezier(.7, 0, .2, 1) .35s, transform 2.2s var(--fl-ease) .35s; }
+.anim .reveal-arch.in img { clip-path: inset(0 0 0 0); transform: none; }
+
+/* Viñetas de trazo: cada pelito se dibuja cuando entra su fila */
+.anim .stroke-mark path { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset .9s var(--fl-ease) .25s; }
+.anim .in .stroke-mark path, .anim .in.stroke-mark path { stroke-dashoffset: 0; }
+
+/* Calendario: las barras de cada curso se llenan en orden */
+.anim .bar { transform: scaleX(0); transform-origin: left center; transition: transform 1s var(--fl-ease); }
+.anim .in .bar { transform: none; }
+.anim .in .bar:nth-of-type(7) { transition-delay: .25s; }
+.anim .in .bar:nth-of-type(8) { transition-delay: .5s; }
+
+/* Los 5 cupos aparecen uno a uno */
+.anim .seat { transform: scale(0); transition: transform .7s cubic-bezier(.34, 1.56, .64, 1); }
+.anim .in .seat { transform: none; }
+.anim .in .seat:nth-child(2) { transition-delay: .12s; }
+.anim .in .seat:nth-child(3) { transition-delay: .24s; }
+.anim .in .seat:nth-child(4) { transition-delay: .36s; }
+.anim .in .seat:nth-child(5) { transition-delay: .48s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim .rv, .anim h1 .w, .anim .reveal-arch img, .anim .bar, .anim .seat { opacity: 1 !important; transform: none !important; clip-path: none !important; transition: none !important; }
+}
