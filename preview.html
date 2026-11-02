@@ -43,11 +43,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 @media (prefers-reduced-motion:reduce){.fl-nav a,.fl-nav a::after{transition:none}}
 /* Tarjeta de fechas */
 .fl-dnum{display:block;font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:32px;line-height:1;color:inherit}
+.fl-dmes{margin-left:6px;font-family:'Century Gothic',CenturyGothic,'Didact Gothic',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;vertical-align:.35em;opacity:.8}
 .fl-dlab{display:block;margin-top:8px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7B5C4C;line-height:1.2}
 .fl-dates-grid li{color:#2A221E;transition:transform .25s ease}
 .fl-dates-grid li:hover{transform:translateY(-3px)}
 @media (max-width:860px){.fl-dates{flex-direction:column;align-items:stretch!important;padding:18px!important}.fl-countdown br{display:none}}
-@media (max-width:560px){.fl-dates-grid{gap:5px!important}.fl-dates-grid li{padding:10px 6px!important;text-align:center}.fl-dnum{font-size:22px}.fl-dlab{font-size:8.5px;letter-spacing:.06em;margin-top:5px}.fl-countdown{font-size:19px!important}}
+@media (max-width:560px){.fl-dates-grid{gap:5px!important}.fl-dates-grid li{padding:10px 6px!important;text-align:center}.fl-dnum{font-size:22px}.fl-dmes{display:block;margin:3px 0 0;font-size:8.5px;letter-spacing:.08em;vertical-align:0}.fl-dlab{font-size:8.5px;letter-spacing:.06em;margin-top:5px}.fl-countdown{font-size:19px!important}}
 </style>
 <style>html{scroll-behavior:smooth}section[id],#combo{scroll-margin-top:120px}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style>
 <link rel="stylesheet" href="anim.css">
@@ -103,11 +104,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 <p class="fl-countdown" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.15; color: #2A221E;">Faltan <span class="fl-days">24</span> días para <br>la primera jornada</p>
 </div>
 <ol class="fl-dates-grid" aria-label="Fechas de la masterclass" style="flex: 1; min-width: 0; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px;">
-<li style="padding: 14px 16px; border-radius: 16px; background: #F0DFCF;"><span class="fl-dnum">26</span><span class="fl-dlab">Cejas</span></li>
-<li style="padding: 14px 16px; border-radius: 16px; background: #F0DFCF;"><span class="fl-dnum">27</span><span class="fl-dlab">Cejas</span></li>
-<li style="padding: 14px 16px; border-radius: 16px; background: #ECD0C9;"><span class="fl-dnum">28</span><span class="fl-dlab">Labios</span></li>
-<li style="padding: 14px 16px; border-radius: 16px; background: #ECD0C9;"><span class="fl-dnum">29</span><span class="fl-dlab">Labios</span></li>
-<li style="padding: 14px 16px; border-radius: 16px; background: #2E2019; color: #F7EFEA;"><span class="fl-dnum">30</span><span class="fl-dlab" style="color: #E4C9B9;">Brow &amp; Lash</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #F0DFCF;"><span class="fl-dnum">26<small class="fl-dmes">NOV</small></span><span class="fl-dlab">Cejas</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #F0DFCF;"><span class="fl-dnum">27<small class="fl-dmes">NOV</small></span><span class="fl-dlab">Cejas</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #ECD0C9;"><span class="fl-dnum">28<small class="fl-dmes">NOV</small></span><span class="fl-dlab">Labios</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #ECD0C9;"><span class="fl-dnum">29<small class="fl-dmes">NOV</small></span><span class="fl-dlab">Labios</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #2E2019; color: #F7EFEA;"><span class="fl-dnum">30<small class="fl-dmes">NOV</small></span><span class="fl-dlab" style="color: #E4C9B9;">Brow &amp; Lash</span></li>
 </ol>
 </div>
 </div>
