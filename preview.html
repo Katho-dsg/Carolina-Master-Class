@@ -41,6 +41,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 @media (max-width:960px){.fl-head{flex-wrap:wrap;row-gap:6px}.fl-nav{order:3;width:100%;justify-content:space-between;gap:16px;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}.fl-nav::-webkit-scrollbar{display:none}.fl-nav a{font-size:14px}}
 @media (max-width:560px){.fl-nav{justify-content:flex-start;gap:20px;padding-right:24px}}
 @media (prefers-reduced-motion:reduce){.fl-nav a,.fl-nav a::after{transition:none}}
+/* Tarjeta de fechas */
+.fl-dnum{display:block;font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:32px;line-height:1;color:inherit}
+.fl-dlab{display:block;margin-top:8px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7B5C4C;line-height:1.2}
+.fl-dates-grid li{color:#2A221E;transition:transform .25s ease}
+.fl-dates-grid li:hover{transform:translateY(-3px)}
+@media (max-width:860px){.fl-dates{flex-direction:column;align-items:stretch!important;padding:18px!important}.fl-countdown br{display:none}}
+@media (max-width:560px){.fl-dates-grid{gap:5px!important}.fl-dates-grid li{padding:10px 6px!important;text-align:center}.fl-dnum{font-size:22px}.fl-dlab{font-size:8.5px;letter-spacing:.06em;margin-top:5px}.fl-countdown{font-size:19px!important}}
 </style>
 <style>html{scroll-behavior:smooth}section[id],#combo{scroll-margin-top:120px}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style>
 <link rel="stylesheet" href="anim.css">
@@ -88,8 +95,25 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 </div>
 </section>
 
+<!-- FECHAS (tarjeta flotante entre el hero y el video) -->
+<div class="fl-dates-wrap" style="position: relative; z-index: 6; height: 0; padding: 0 24px;">
+<div class="fl-dates fl-hero-in" style="box-sizing: border-box; max-width: 1140px; margin: 0 auto; transform: translateY(-50%); display: flex; align-items: center; gap: 16px 28px; padding: 18px 20px 18px 28px; border-radius: 24px; background: #FFFAF5; box-shadow: 0 30px 60px -28px rgba(42, 34, 30, 0.45), 0 2px 6px rgba(42, 34, 30, 0.06);">
+<div class="fl-dates-txt" style="flex: none;">
+<p style="margin: 0 0 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.22em; color: #A37661;">NOVIEMBRE 2026</p>
+<p class="fl-countdown" style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 22px; line-height: 1.15; color: #2A221E;">Faltan <span class="fl-days">24</span> días para <br>la primera jornada</p>
+</div>
+<ol class="fl-dates-grid" aria-label="Fechas de la masterclass" style="flex: 1; min-width: 0; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px;">
+<li style="padding: 14px 16px; border-radius: 16px; background: #F0DFCF;"><span class="fl-dnum">26</span><span class="fl-dlab">Cejas</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #F0DFCF;"><span class="fl-dnum">27</span><span class="fl-dlab">Cejas</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #ECD0C9;"><span class="fl-dnum">28</span><span class="fl-dlab">Labios</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #ECD0C9;"><span class="fl-dnum">29</span><span class="fl-dlab">Labios</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #2E2019; color: #F7EFEA;"><span class="fl-dnum">30</span><span class="fl-dlab" style="color: #E4C9B9;">Brow &amp; Lash</span></li>
+</ol>
+</div>
+</div>
+
 <!-- 2. VIDEO VSL -->
-<section id="video" class="fl-seda-oscura" style="position: relative; padding: clamp(64px, 8vw, 112px) 24px; color: #E4C9B9; text-align: center;">
+<section id="video" class="fl-seda-oscura" style="position: relative; padding: calc(clamp(64px, 8vw, 112px) + 64px) 24px clamp(64px, 8vw, 112px); color: #E4C9B9; text-align: center;">
 <div style="max-width: 1000px; margin: 0 auto;">
 <p class="fl-rv" style="margin: 0 0 12px; font-size: 15px; color: #B9A195;">Antes de elegir tu capacitación</p>
 <h2 class="fl-rv" style="margin: 0 auto 36px; max-width: 16em; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(32px, 4.4vw, 58px); line-height: 1.1; letter-spacing: -0.01em; color: #F7EFEA;">Mira este video. Te explico por qué esta masterclass es diferente.</h2>
@@ -327,6 +351,20 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 
 </div>
 <script src="anim.js"></script>
+<script>
+/* Cuenta regresiva hasta la primera jornada (26 nov 2026, hora Colombia) */
+(function(){
+  var el=document.querySelector('.fl-countdown'); if(!el) return;
+  var start=Date.UTC(2026,10,26,5), end=Date.UTC(2026,11,1,5); /* 00:00 en Bogotá */
+  var now=Date.now(), day=864e5;
+  var hoy=Math.floor((now-5*36e5)/day), ini=Math.floor((start-5*36e5)/day);
+  var n=ini-hoy;
+  if(n>1) el.innerHTML='Faltan <span class="fl-days">'+n+'</span> días para <br>la primera jornada';
+  else if(n===1) el.innerHTML='Falta <span class="fl-days">1</span> día para <br>la primera jornada';
+  else if(now<end) el.innerHTML='¡La masterclass <br>ya comenzó!';
+  else el.innerHTML='Edición 2026 <br>finalizada';
+})();
+</script>
 <script>
 /* Marca en el menú la sección que se está viendo */
 (function(){
