@@ -56,6 +56,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 .fl-bub-caro p{color:#F7EFEA}
 .fl-bub-name{display:block;margin-bottom:4px;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#E4C9B9}
 @media (max-width:560px){.fl-chat .fl-bub{max-width:min(86%, 300px)}.fl-chat .fl-bub-caro{max-width:96%}}
+/* Sección La masterclass (complemento) */
+.fl-arch{position:relative;width:clamp(240px,24vw,320px);aspect-ratio:706/884}
+.fl-arch::before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1px solid #C9A27E;border-radius:999px 999px 6px 6px;pointer-events:none}
+.fl-arch img{position:relative;display:block;width:100%;height:100%;object-fit:cover;border-radius:999px 999px 8px 8px;box-shadow:0 30px 60px -30px rgba(42,34,30,.45)}
+.fl-mark-word{padding:0 .12em;border-radius:8px;background:#EAD7C4;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.fl-link{display:inline-flex;align-items:center;gap:8px;padding-bottom:6px;border-bottom:1.5px solid #C9A27E;color:#2A221E;font-size:16px;font-weight:600;text-decoration:none;transition:gap .25s ease,border-color .25s ease}
+.fl-link:hover{gap:14px;color:#2A221E;border-color:#7B5C4C}
+@media (max-width:560px){.fl-arch{width:220px}}
 /* Tarjeta de fechas */
 .fl-dnum{display:block;font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:32px;line-height:1;color:inherit}
 .fl-dmes{margin-left:6px;font-family:'Jost','Century Gothic',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;vertical-align:.35em;opacity:.8}
@@ -165,6 +173,21 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 <li class="fl-bub fl-bub-r fl-rv"><p>“Llevo años en el mismo nivel.”</p></li>
 <li class="fl-bub fl-bub-r fl-bub-caro fl-rv"><span class="fl-bub-name">Carolina</span><p>No necesitas empezar de cero. Necesitas aprender a ver, entender y corregir lo que hoy te limita.</p></li>
 </ul>
+</div>
+</div>
+</section>
+
+<!-- 3B. LA MASTERCLASS (complemento corto) -->
+<section id="masterclass" style="padding: clamp(48px, 5vw, 72px) 24px; background: #F6EEE6;">
+<div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 32px clamp(40px, 6vw, 96px);">
+<div class="fl-arch fl-rv" style="flex: none;">
+<img loading="lazy" src="img/carolina-clase.webp" alt="Carolina revisando el trabajo de una alumna durante una capacitación" width="706" height="884">
+</div>
+<div style="flex: 1 1 420px; min-width: 0; max-width: 560px;">
+<p class="fl-rv" style="margin: 0 0 12px; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; color: #A37661;">LA MASTERCLASS</p>
+<h2 class="fl-rv" style="margin: 0 0 16px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.2vw, 46px); line-height: 1.05; letter-spacing: -0.02em;">Vienes a <span class="fl-mark-word">perfeccionar</span> lo que ya sabes.</h2>
+<p class="fl-rv" style="margin: 0 0 22px; color: #5E4639;">Ves a Carolina trabajar en vivo, practicas en plantilla y en modelo real, y en grupos de cinco ella revisa tus trazos y te corrige en el momento.</p>
+<a href="#capacitaciones" class="fl-link fl-rv">Ver fechas y precios <span aria-hidden="true">→</span></a>
 </div>
 </div>
 </section>
