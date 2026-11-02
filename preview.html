@@ -64,6 +64,107 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 .fl-link{display:inline-flex;align-items:center;gap:8px;padding-bottom:6px;border-bottom:1.5px solid #C9A27E;color:#2A221E;font-size:16px;font-weight:600;text-decoration:none;transition:gap .25s ease,border-color .25s ease}
 .fl-link:hover{gap:14px;color:#2A221E;border-color:#7B5C4C}
 @media (max-width:560px){.fl-arch{width:220px}}
+/* ===== Secciones fusionadas ===== */
+.fl-sec{padding:clamp(64px,7vw,104px) 24px}
+.fl-wrap{max-width:1140px;margin:0 auto}
+.fl-split{display:flex;flex-wrap:wrap;align-items:center;gap:40px clamp(40px,6vw,96px)}
+.fl-head-c{text-align:center;max-width:760px;margin:0 auto clamp(32px,4vw,52px)}
+.fl-eyebrow{margin:0 0 12px;font-size:12px;font-weight:600;letter-spacing:.22em;color:#A37661}
+.fl-h2{margin:0 0 16px;font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(32px,3.4vw,50px);line-height:1.04;letter-spacing:-.02em;color:#2A221E}
+.fl-pill{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-height:52px;padding:0 24px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;text-align:center;border:1.5px solid transparent;cursor:pointer;font-family:inherit}
+.fl-pill-dark{background:#2E2019;color:#F7EFEA}.fl-pill-dark:hover{color:#F7EFEA}
+.fl-pill-gold{background:#9A6B3C;color:#FFF8F0;box-shadow:0 16px 30px -18px rgba(154,107,60,.9)}.fl-pill-gold:hover{color:#FFF8F0}
+.fl-pill-line{background:transparent;border-color:#2A221E;color:#2A221E}.fl-pill-line:hover{color:#2A221E}
+/* capacitaciones */
+.fl-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;align-items:stretch}
+.fl-card{display:flex;flex-direction:column;padding:10px 10px 22px;border-radius:28px;background:#FFFAF5;box-shadow:0 24px 50px -34px rgba(42,34,30,.5)}
+.fl-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;margin-bottom:18px}
+.fl-card>*:not(img){margin-left:14px;margin-right:14px}
+.fl-card-date{margin-top:0;margin-bottom:6px;font-size:12px;font-weight:600;letter-spacing:.14em;color:#7B5C4C}
+.fl-card h3{margin-top:0;margin-bottom:10px;font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:28px;line-height:1.08}
+.fl-card-txt{margin-top:0;margin-bottom:18px;font-size:15px;color:#5E4639;flex-grow:1}
+.fl-card-price{padding-top:16px;margin-bottom:18px;border-top:1px solid rgba(123,92,76,.2)}
+.fl-card-price s{font-size:14px;color:#8D7365}
+.fl-card-price strong{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:34px;line-height:1}
+.fl-card-price small{display:block;margin-top:4px;font-size:12px;color:#8D7365}
+.fl-card-dark{background:#2E2019;color:#F7EFEA}
+.fl-card-dark .fl-card-date{color:#C9A27E}.fl-card-dark .fl-card-txt{color:#E4C9B9}.fl-card-dark .fl-card-price{border-color:rgba(228,201,185,.2)}.fl-card-dark small,.fl-card-dark s{color:#B9A195}
+/* combo */
+.fl-mark-dark{background:rgba(201,162,126,.35)}
+.fl-dots{display:flex;gap:8px;margin:0;padding:0;list-style:none}
+.fl-dots li{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(228,201,185,.45);font-family:'DM Serif Display',Georgia,serif;font-size:18px;color:#F7EFEA}
+.fl-dots li.is-gift{background:#9A6B3C;border-color:#9A6B3C}
+.fl-invest{position:relative;flex:1 1 380px;min-width:0;max-width:420px;margin-left:auto;padding:30px;border-radius:28px;background:#FFFAF5;color:#2A221E;box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.fl-save{position:absolute;top:-14px;right:22px;padding:6px 14px;border-radius:999px;background:#9A6B3C;color:#FFF8F0;font-size:12px;font-weight:600;letter-spacing:.14em}
+.fl-invest h3{margin:0 0 10px;font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:24px}
+.fl-invest dl{margin:0 0 16px}
+.fl-invest dl div{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(123,92,76,.18);font-size:15px}
+.fl-invest dd{margin:0;text-align:right;font-weight:600}
+.fl-invest dd s{display:block;font-size:12px;font-weight:400;color:#8D7365}
+.fl-invest dd em{font-style:normal;letter-spacing:.12em;color:#3E7B4F}
+.fl-invest-label{margin:0;font-size:11px;font-weight:600;letter-spacing:.16em;color:#7B5C4C}
+.fl-invest-total{margin:2px 0 12px;font-family:'DM Serif Display',Georgia,serif;font-size:clamp(44px,4.4vw,60px);line-height:1;color:#5E4639}
+.fl-invest-total small{font-family:'Jost',sans-serif;font-size:14px;font-weight:600;color:#2A221E}
+.fl-invest-note{margin:0 0 16px;padding:12px 14px;border-radius:14px;background:#F1E3D6;font-size:13px;line-height:1.5}
+.fl-invest-foot{margin:10px 0 0;text-align:center;font-size:12px;color:#8D7365}
+/* incluye */
+.fl-five{display:inline-flex;align-items:center;gap:12px;margin:6px 0 0;padding:8px 16px 8px 10px;border-radius:999px;background:#EFE0D2;font-size:14px;color:#5E4639;text-align:left}
+.fl-seats{display:flex;gap:3px;flex:none}.fl-seats i{width:12px;height:12px;border-radius:50%;background:#A37661}.fl-seats i:nth-child(2){background:#B98A6E}.fl-seats i:nth-child(3){background:#C9A27E}.fl-seats i:nth-child(4){background:#D8B99C}.fl-seats i:nth-child(5){background:#E4C9B9}
+.fl-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px 32px}
+.fl-col{border-top:1px solid #7B5C4C;padding-top:16px}
+.fl-col-k{margin:0 0 14px;font-size:12px;font-weight:600;letter-spacing:.18em;color:#A37661}
+.fl-col h3{margin:0 0 2px;font-size:16px;font-weight:600;color:#2A221E}
+.fl-col p:not(.fl-col-k):not(.fl-big6){margin:0 0 14px;font-size:14px;line-height:1.5;color:#7B5C4C}
+.fl-big6{margin:0 0 6px;font-family:'DM Serif Display',Georgia,serif;font-size:84px;line-height:.9;color:#B87474}
+/* carolina */
+.fl-caro-photo{position:relative;flex:1 1 320px;max-width:400px;margin:0 auto}
+.fl-caro-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;border:6px solid #FFFAF5;border-radius:999px 999px 10px 10px;box-shadow:0 30px 60px -30px rgba(42,34,30,.45)}
+.fl-caro-name{position:absolute;left:-14px;bottom:-18px;margin:0;font-family:'DM Serif Display',Georgia,serif;font-size:clamp(56px,6vw,84px);line-height:1;letter-spacing:-.02em;color:#5E4639}
+.fl-quote{margin:0 0 16px;font-family:'DM Serif Display',Georgia,serif;font-size:clamp(22px,2vw,28px);line-height:1.2;color:#5E4639}
+.fl-years{display:flex;align-items:center;gap:14px;padding-top:18px;border-top:1px solid rgba(123,92,76,.3);font-size:13px;font-weight:600;letter-spacing:.16em;color:#5E4639}
+.fl-years span{font-family:'DM Serif Display',Georgia,serif;font-size:48px;line-height:1;letter-spacing:0;color:#B87474}
+/* resultados */
+.fl-ba{display:grid;grid-template-columns:1fr 1fr;gap:4px;max-width:760px;margin:0 auto 36px;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -36px rgba(42,34,30,.55)}
+.fl-ba div{position:relative}
+.fl-ba img{display:block;width:100%;height:100%;aspect-ratio:1/0.93;object-fit:cover}
+.fl-ba span{position:absolute;top:14px;left:14px;padding:5px 12px;border-radius:999px;background:rgba(255,250,245,.9);font-size:11px;font-weight:600;letter-spacing:.16em;color:#2A221E}
+.fl-ba span.is-after{left:auto;right:14px;background:#2E2019;color:#F7EFEA}
+.fl-ba figcaption{grid-column:1/-1;padding:10px 4px 0;background:#F6EEE6;font-size:13px;color:#7B5C4C}
+.fl-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.fl-gallery figure{margin:0}
+.fl-gallery img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:20px}
+.fl-gallery figcaption{margin-top:8px;text-align:center;font-size:13px;color:#7B5C4C}
+/* preguntas */
+.fl-faqs{display:flex;flex-direction:column;gap:8px}
+.fl-faqs .fl-faq{border-radius:16px;background:#FFFAF5;border:1px solid rgba(201,162,126,.35)}
+.fl-faqs summary{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:56px;padding:10px 20px;font-size:15px;font-weight:600;color:#2A221E}
+.fl-faqs .fl-plus{flex:none;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid #C9A27E;color:#9A6B3C;font-size:18px;font-weight:400}
+.fl-faqs details p{margin:0;padding:0 20px 18px;font-size:15px;color:#5E4639}
+/* reserva */
+.fl-prices{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;max-width:460px}
+.fl-prices li{display:grid;grid-template-columns:96px 1fr auto;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;background:#F8EFE7;font-size:14px}
+.fl-prices b{color:#9A6B3C}.fl-prices strong{font-weight:600}
+.fl-prices li.is-combo{background:#2E2019;color:#F7EFEA}.fl-prices li.is-combo b{color:#C9A27E}
+.fl-form{flex:1 1 380px;min-width:0;max-width:430px;margin-left:auto;padding:30px;border-radius:28px;background:#FFFAF5;box-shadow:0 40px 80px -44px rgba(42,34,30,.6)}
+.fl-form h3{margin:0 0 6px;font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:34px;line-height:1.05}
+.fl-form-sub{margin:0 0 18px;font-size:13px;color:#7B5C4C}
+.fl-form label{display:block;margin:0 0 6px;font-size:14px;font-weight:600}
+.fl-form input[type=text],.fl-form input[type=tel]{box-sizing:border-box;width:100%;height:46px;margin-bottom:14px;padding:0 14px;border:1px solid #E2CDBB;border-radius:12px;background:#F4E7DC;font:inherit;font-size:15px;color:#2A221E}
+.fl-form input:focus{outline:2px solid #C9A27E;outline-offset:1px}
+.fl-form fieldset{margin:0 0 16px;padding:0;border:0}
+.fl-form legend{margin-bottom:8px;font-size:14px;font-weight:600}
+.fl-opt{display:flex!important;align-items:center;gap:10px;margin:0 0 6px!important;padding:10px 14px;border:1px solid #E8D6C6;border-radius:12px;background:#F8EFE7;font-weight:400!important;cursor:pointer}
+.fl-opt span{flex:1;font-size:14px}.fl-opt b{font-size:14px}
+.fl-opt input{accent-color:#9A6B3C;margin:0}
+.fl-opt:has(input:checked){border-color:#9A6B3C;background:#F1E3D6}
+.fl-form-err{margin:0 0 10px;font-size:13px;color:#A23B3B}
+.fl-form-foot{margin:12px 0 0;font-size:12px;color:#8D7365}
+/* footer */
+.fl-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;font-size:14px}
+.fl-foot nav{display:flex;flex-wrap:wrap;gap:8px 22px}
+.fl-foot a{color:#E4C9B9;text-decoration:none}.fl-foot a:hover{color:#FFFAF5}
+.fl-foot p{margin:0}
+@media (max-width:760px){.fl-gallery{grid-template-columns:1fr 1fr}.fl-gallery figure:last-child{grid-column:1/-1}.fl-invest,.fl-form{margin-left:0;max-width:none}.fl-prices li{grid-template-columns:1fr auto}.fl-prices b{grid-column:1/-1;font-size:12px}.fl-caro-name{left:0}}
 /* Tarjeta de fechas */
 .fl-dnum{display:block;font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:32px;line-height:1;color:inherit}
 .fl-dmes{margin-left:6px;font-family:'Jost','Century Gothic',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;vertical-align:.35em;opacity:.8}
@@ -192,197 +293,200 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 </div>
 </section>
 
-<!-- 4. CAPACITACIONES + COMBO -->
-<section id="capacitaciones" style="padding: clamp(64px, 8vw, 112px) 24px; background: linear-gradient(180deg, #F7EFEA 0%, #EEDDD2 55%, #E4C9B9 100%);">
-<div style="max-width: 1140px; margin: 0 auto;">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 40px; margin-bottom: 36px;">
-<h2 class="fl-rv" style="margin: 0; max-width: 12em; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: clamp(34px, 4.4vw, 60px); line-height: 1.06; letter-spacing: -0.015em;">Elige la especialidad que vas a perfeccionar.</h2>
-<p class="fl-rv" style="margin: 0; max-width: 24em; color: #7B5C4C;">Formación presencial con demostración en vivo, práctica en plantilla y en modelo real.</p>
+<!-- 4. CAPACITACIONES -->
+<section id="capacitaciones" class="fl-sec" style="background: #EFE0D2;">
+<div class="fl-wrap">
+<div class="fl-head-c fl-rv">
+<p class="fl-eyebrow">LAS TRES CAPACITACIONES</p>
+<h2 class="fl-h2">Elige la especialidad que quieres llevar más lejos.</h2>
 </div>
-
-<div class="fl-rv fl-cal" role="img" aria-label="Calendario: cejas hiperrealistas el 26 y 27 de noviembre, labios el 28 y 29, Brow and Lash Repair el 30" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; margin-bottom: 20px;">
-<div style="padding: 12px 0 8px; text-align: center; border-radius: 16px 16px 0 0; background: rgba(255, 255, 255, 0.55);"><span style="display: block; font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(28px, 3.6vw, 46px); line-height: 1;">26</span><span style="font-size: 13px;">jue</span></div>
-<div style="padding: 12px 0 8px; text-align: center; border-radius: 16px 16px 0 0; background: rgba(255, 255, 255, 0.55);"><span style="display: block; font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(28px, 3.6vw, 46px); line-height: 1;">27</span><span style="font-size: 13px;">vie</span></div>
-<div style="padding: 12px 0 8px; text-align: center; border-radius: 16px 16px 0 0; background: rgba(255, 255, 255, 0.55);"><span style="display: block; font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(28px, 3.6vw, 46px); line-height: 1;">28</span><span style="font-size: 13px;">sáb</span></div>
-<div style="padding: 12px 0 8px; text-align: center; border-radius: 16px 16px 0 0; background: rgba(255, 255, 255, 0.55);"><span style="display: block; font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(28px, 3.6vw, 46px); line-height: 1;">29</span><span style="font-size: 13px;">dom</span></div>
-<div style="padding: 12px 0 8px; text-align: center; border-radius: 16px 16px 0 0; background: rgba(255, 255, 255, 0.55);"><span style="display: block; font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(28px, 3.6vw, 46px); line-height: 1;">30</span><span style="font-size: 13px;">lun</span></div>
-<div class="fl-bar" style="grid-column: span 2; padding: 9px 10px; border-radius: 0 0 16px 16px; background: #2A221E; color: #F7EFEA; font-size: 14px; text-align: center;">Cejas</div>
-<div class="fl-bar" style="grid-column: span 2; padding: 9px 10px; border-radius: 0 0 16px 16px; background: #7B5C4C; color: #FFFFFF; font-size: 14px; text-align: center;">Labios</div>
-<div class="fl-bar" style="padding: 9px 4px; border-radius: 0 0 16px 16px; background: #F7EFEA; color: #2A221E; font-size: 14px; text-align: center;">Repair</div>
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 16px;">
-<article class="fl-rv" style="display: flex; flex-direction: column; padding: 32px 28px; border-radius: 28px; background: linear-gradient(160deg, #2A221E 0%, #4A3A31 100%); color: #E4C9B9;">
-<p style="margin: 0 0 4px; font-size: 14px; color: #B9A195;">26 y 27 de noviembre, 2 días</p>
-<h3 style="margin: 0 0 12px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.15; color: #F7EFEA;">Cejas hiperrealistas</h3>
-<p style="margin: 0 0 24px; font-size: 15px; flex-grow: 1;">Trazos más naturales, delicados y armónicos, y consistencia en cada procedimiento.</p>
-<p style="margin: 0; font-size: 14px; color: #B9A195;"><s>$5.000.000</s> precio de esta edición</p>
-<p style="margin: 0 0 22px; font-family: 'DM Serif Display', Georgia, serif; font-size: 38px; line-height: 1.1; color: #F7EFEA;">$4.000.000 <span style="font-family: 'Jost', 'Century Gothic', sans-serif; font-size: 13px;">COP</span></p>
-<a href="#reservar" class="fl-btn" style="display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 18px; border-radius: 999px; background: linear-gradient(135deg, #F7EFEA, #E4C9B9); color: #2A221E; font-size: 14px; font-weight: 700; text-decoration: none; text-align: center;">Quiero perfeccionar mis cejas</a>
+<div class="fl-cards">
+<article class="fl-card fl-rv">
+<img loading="lazy" src="img/cap-cejas.webp" alt="Cejas hiperrealistas pelo a pelo" width="496" height="396">
+<p class="fl-card-date">26 Y 27 NOV · 2 DÍAS</p>
+<h3>Cejas hiperrealistas</h3>
+<p class="fl-card-txt">Para que tus cejas se vean más naturales y armónicas, y sepas repetir el mismo resultado en cada clienta.</p>
+<div class="fl-card-price"><s>$5.000.000</s> <strong>$4.000.000</strong><small>COP · precio especial de esta edición</small></div>
+<a href="#reservar" class="fl-btn fl-pill fl-pill-dark" data-curso="Cejas hiperrealistas">Quiero perfeccionar mis cejas</a>
 </article>
-<article class="fl-rv" style="display: flex; flex-direction: column; padding: 32px 28px; border-radius: 28px; background: linear-gradient(160deg, #7B5C4C 0%, #5E4639 100%); color: #F7EFEA;">
-<p style="margin: 0 0 4px; font-size: 14px; color: #E4C9B9;">28 y 29 de noviembre, 2 días</p>
-<h3 style="margin: 0 0 12px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.15;">Micropigmentación de labios</h3>
-<p style="margin: 0 0 24px; font-size: 15px; flex-grow: 1;">Resultados labiales más armónicos, definidos y profesionales, trabajados con criterio.</p>
-<p style="margin: 0; font-size: 14px; color: #E4C9B9;"><s>$5.000.000</s> precio de esta edición</p>
-<p style="margin: 0 0 22px; font-family: 'DM Serif Display', Georgia, serif; font-size: 38px; line-height: 1.1;">$4.000.000 <span style="font-family: 'Jost', 'Century Gothic', sans-serif; font-size: 13px;">COP</span></p>
-<a href="#reservar" class="fl-btn" style="display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 18px; border-radius: 999px; background: linear-gradient(135deg, #F7EFEA, #E4C9B9); color: #2A221E; font-size: 14px; font-weight: 700; text-decoration: none; text-align: center;">Quiero perfeccionar mis labios</a>
+<article class="fl-card fl-card-dark fl-rv">
+<img loading="lazy" src="img/cap-labios.webp" alt="Labios micropigmentados con color parejo" width="496" height="396">
+<p class="fl-card-date">28 Y 29 NOV · 2 DÍAS</p>
+<h3>Micropigmentación de labios</h3>
+<p class="fl-card-txt">Labios más definidos y armónicos: entiendes mejor el procedimiento y entregas el resultado que tu clienta espera.</p>
+<div class="fl-card-price"><s>$5.000.000</s> <strong>$4.000.000</strong><small>COP · precio especial de esta edición</small></div>
+<a href="#reservar" class="fl-btn fl-pill fl-pill-gold" data-curso="Micropigmentación de labios">Quiero perfeccionar mis labios</a>
 </article>
-<article class="fl-rv" style="display: flex; flex-direction: column; padding: 32px 28px; border-radius: 28px; background: rgba(255, 255, 255, 0.55); border: 1px solid rgba(255, 255, 255, 0.85);">
-<p style="margin: 0 0 4px; font-size: 14px; color: #7B5C4C;">30 de noviembre, 1 día</p>
-<h3 style="margin: 0 0 12px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.15;">Brow &amp; Lash Repair</h3>
-<p style="margin: 0 0 24px; font-size: 15px; flex-grow: 1;">Especialidad complementaria para ampliar tus servicios en cejas y pestañas.</p>
-<p style="margin: 0; font-size: 14px; color: #7B5C4C;">Valor individual</p>
-<p style="margin: 0 0 22px; font-family: 'DM Serif Display', Georgia, serif; font-size: 38px; line-height: 1.1;">$2.500.000 <span style="font-family: 'Jost', 'Century Gothic', sans-serif; font-size: 13px;">COP</span></p>
-<a href="#reservar" class="fl-btn" style="display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 18px; border-radius: 999px; border: 1px solid #2A221E; color: #2A221E; font-size: 14px; font-weight: 700; text-decoration: none; text-align: center;">Quiero Brow &amp; Lash Repair</a>
+<article class="fl-card fl-rv">
+<img loading="lazy" src="img/cap-brow.webp" alt="Cejas y pestañas con Brow &amp; Lash Repair" width="496" height="396">
+<p class="fl-card-date">30 NOV · 1 DÍA</p>
+<h3>Brow &amp; Lash Repair</h3>
+<p class="fl-card-txt">Revitalización folicular para cejas y pestañas. Un servicio nuevo para tu agenda, de regalo si tomas cejas y labios.</p>
+<div class="fl-card-price"><strong>$2.500.000</strong><small>COP · gratis con el combo completo</small></div>
+<a href="#reservar" class="fl-btn fl-pill fl-pill-line" data-curso="Brow &amp; Lash Repair">Quiero conocer Brow &amp; Lash Repair</a>
 </article>
 </div>
-
-<div id="combo" class="fl-rv fl-seda-oscura" style="position: relative; overflow: hidden; display: flex; flex-wrap: wrap; align-items: center; gap: 28px 48px; padding: clamp(28px, 4.5vw, 56px); border-radius: 32px; color: #E4C9B9; box-shadow: 0 40px 100px -40px rgba(42, 34, 30, 0.8);">
-<div style="flex: 1 1 380px; min-width: 0;">
-<p style="display: inline-flex; margin: 0 0 16px; padding: 6px 14px; border-radius: 999px; background: linear-gradient(135deg, #E4C9B9, #A37661); color: #2A221E; font-size: 13px; font-weight: 700;">El combo más completo</p>
-<h3 style="margin: 0 0 14px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.12; color: #F7EFEA;">Cejas + labios, y Brow &amp; Lash Repair de regalo.</h3>
-<p style="margin: 0; font-size: 15px; max-width: 30em;">Las dos especialidades principales en una sola edición. Pagarías $10.500.000 COP por los tres cursos; con el combo ahorras $2.500.000 COP.</p>
-</div>
-<div style="flex: 1 1 320px; min-width: 0;">
-<p style="margin: 0; font-size: 15px; color: #B9A195;"><s>$10.500.000</s> inversión total</p>
-<p class="fl-count" style="margin: 0 0 18px; font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(50px, 6.4vw, 88px); line-height: 1; letter-spacing: -0.02em; color: #F7EFEA;">$8.000.000 <span style="font-family: 'Jost', 'Century Gothic', sans-serif; font-size: 16px; letter-spacing: 0; color: #E4C9B9;">COP</span></p>
-<a href="#reservar" class="fl-btn" style="display: flex; align-items: center; justify-content: center; min-height: 58px; padding: 0 24px; border-radius: 999px; background: linear-gradient(135deg, #F7EFEA, #E4C9B9); color: #2A221E; font-size: 15px; font-weight: 700; text-decoration: none; text-align: center;">Quiero el combo completo</a>
-</div>
-</div>
 </div>
 </section>
 
-<!-- 5. QUÉ TE LLEVAS -->
-<section id="incluye" style="position: relative; padding: clamp(64px, 8vw, 112px) 24px; background: radial-gradient(ellipse 60% 50% at 85% 10%, rgba(163, 118, 97, 0.45), rgba(42, 34, 30, 0) 70%), radial-gradient(ellipse 50% 50% at 0% 100%, rgba(123, 92, 76, 0.5), rgba(42, 34, 30, 0) 70%), #2A221E; color: #E4C9B9;">
-<div style="max-width: 1140px; margin: 0 auto;">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 40px; margin-bottom: 40px;">
-<h2 class="fl-rv" style="margin: 0; max-width: 13em; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: clamp(34px, 4.4vw, 60px); line-height: 1.06; letter-spacing: -0.015em; color: #F7EFEA;">No solo aprendes una técnica. Te llevas un oficio más completo.</h2>
-<div class="fl-rv" style="display: flex; align-items: center; gap: 16px;">
-<div class="fl-seats" role="img" aria-label="Cinco lugares: el máximo de alumnas por grupo" style="display: flex; gap: 6px;">
-<span style="width: 34px; height: 34px; border-radius: 50%; background: #F7EFEA;"></span>
-<span style="width: 34px; height: 34px; border-radius: 50%; background: #E4C9B9;"></span>
-<span style="width: 34px; height: 34px; border-radius: 50%; background: #B9A195;"></span>
-<span style="width: 34px; height: 34px; border-radius: 50%; background: #A37661;"></span>
-<span style="width: 34px; height: 34px; border-radius: 50%; background: #8D7365;"></span>
+<!-- 5. COMBO -->
+<section id="combo" class="fl-sec fl-seda-oscura" style="color: #E4C9B9;">
+<div class="fl-wrap fl-split">
+<div class="fl-rv" style="flex: 1 1 420px; min-width: 0;">
+<p class="fl-eyebrow" style="color: #C9A27E;">EL COMBO MÁS COMPLETO DE FUN2LASH</p>
+<h2 class="fl-h2" style="color: #F7EFEA;">Toma cejas y labios y <span class="fl-mark-word fl-mark-dark">te regalamos</span> Brow &amp; Lash Repair.</h2>
+<p style="margin: 0 0 24px; max-width: 26em;">Cinco días seguidos con las dos especialidades principales y una tercera de regalo.</p>
+<ol class="fl-dots" aria-label="Del 26 al 30 de noviembre"><li>26</li><li>27</li><li>28</li><li>29</li><li class="is-gift">30</li></ol>
 </div>
-<p style="margin: 0; font-size: 15px; line-height: 1.35;">Máximo 5 alumnas<br>por grupo</p>
-</div>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px;">
-<div class="fl-rv" style="padding: 28px; border-radius: 24px; background: linear-gradient(160deg, rgba(228, 201, 185, 0.12), rgba(228, 201, 185, 0.03)); border: 1px solid rgba(228, 201, 185, 0.18);">
-<h3 style="margin: 0 0 8px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 24px; color: #F7EFEA;">Demostración en vivo</h3>
-<p style="margin: 0; font-size: 15px;">Ves el procedimiento completo y entiendes cada decisión técnica.</p>
-</div>
-<div class="fl-rv" style="padding: 28px; border-radius: 24px; background: linear-gradient(160deg, rgba(228, 201, 185, 0.12), rgba(228, 201, 185, 0.03)); border: 1px solid rgba(228, 201, 185, 0.18);">
-<h3 style="margin: 0 0 8px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 24px; color: #F7EFEA;">Plantilla y modelo real</h3>
-<p style="margin: 0; font-size: 15px;">Practicas los detalles y luego trabajas en una persona, con orientación.</p>
-</div>
-<div class="fl-rv" style="padding: 28px; border-radius: 24px; background: linear-gradient(160deg, rgba(228, 201, 185, 0.12), rgba(228, 201, 185, 0.03)); border: 1px solid rgba(228, 201, 185, 0.18);">
-<h3 style="margin: 0 0 8px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 24px; color: #F7EFEA;">Materiales e insumos</h3>
-<p style="margin: 0; font-size: 15px;">Materiales para las prácticas, guía de proveedores y asesoría para elegir.</p>
-</div>
-<div class="fl-rv" style="padding: 28px; border-radius: 24px; background: linear-gradient(160deg, rgba(228, 201, 185, 0.12), rgba(228, 201, 185, 0.03)); border: 1px solid rgba(228, 201, 185, 0.18);">
-<h3 style="margin: 0 0 8px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 24px; color: #F7EFEA;">Fotografía y contenido</h3>
-<p style="margin: 0; font-size: 15px;">Fotografía tus procedimientos y edita videos que muestren tu nivel.</p>
-</div>
-<div class="fl-rv" style="padding: 28px; border-radius: 24px; background: linear-gradient(160deg, rgba(228, 201, 185, 0.12), rgba(228, 201, 185, 0.03)); border: 1px solid rgba(228, 201, 185, 0.18);">
-<h3 style="margin: 0 0 8px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 24px; color: #F7EFEA;">Marketing y ventas</h3>
-<p style="margin: 0; font-size: 15px;">Comunica el valor de tu trabajo y vende tus tratamientos con seguridad.</p>
-</div>
-<div class="fl-rv" style="padding: 28px; border-radius: 24px; background: linear-gradient(135deg, #E4C9B9, #A37661); color: #2A221E;">
-<h3 style="margin: 0 0 8px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 24px;">6 meses de acompañamiento</h3>
-<p style="margin: 0; font-size: 15px;">Tu aprendizaje no termina al salir del aula.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- 6. CAROLINA -->
-<section id="carolina" class="fl-seda-clara" style="position: relative; overflow: hidden; padding: clamp(56px, 7vw, 96px) 24px 0;">
-<div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px clamp(32px, 5vw, 72px);">
-<div style="flex: 1 1 360px; min-width: 0; max-width: 480px; margin: 0 auto;">
-<img loading="lazy" src="img/carolina-retrato.webp" alt="Retrato de Carolina" class="fl-rv" style="display: block; width: 100%; height: auto; -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent 100%); mask-image: linear-gradient(180deg, #000 72%, transparent 100%); border-radius: 240px 240px 0 0;">
-</div>
-<div style="flex: 1 1 480px; min-width: 0; padding-bottom: clamp(48px, 7vw, 96px);">
-<p class="fl-rv" style="margin: 0 0 4px; font-size: 15px; color: #7B5C4C;">Tu formadora</p>
-<h2 class="fl-rv" style="margin: 0 0 6px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: clamp(64px, 9vw, 132px); line-height: 0.95; letter-spacing: -0.03em;">Carolina</h2>
-<p class="fl-rv" style="margin: 0 0 28px; font-size: 16px; color: #7B5C4C;">Especialista en micropigmentación y formadora en Fun2Lash</p>
-<blockquote class="fl-rv" style="margin: 0 0 28px; padding: 0 0 0 0;">
-<p style="margin: 0 0 12px; font-family: 'DM Serif Display', Georgia, serif; font-style: italic; font-size: clamp(20px, 2vw, 25px); line-height: 1.45; max-width: 26em;">“Me encanta descubrir los detalles que transforman un resultado. Si ya tienes el talento y las ganas de evolucionar, quiero acompañarte en ese proceso.”</p>
-</blockquote>
-<div class="fl-rv" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px;">
-<span style="padding: 10px 16px; border-radius: 999px; border: 1px dashed #7B5C4C; font-size: 14px;">[Años de experiencia]</span>
-<span style="padding: 10px 16px; border-radius: 999px; border: 1px dashed #7B5C4C; font-size: 14px;">[Certificaciones]</span>
-<span style="padding: 10px 16px; border-radius: 999px; border: 1px dashed #7B5C4C; font-size: 14px;">[Alumnas formadas]</span>
-</div>
-<a href="#reservar" class="fl-btn fl-rv" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 28px; border-radius: 999px; background: linear-gradient(135deg, #7B5C4C, #2A221E); color: #F7EFEA; font-size: 15px; font-weight: 700; text-decoration: none;">Quiero aprender con Carolina</a>
-</div>
-</div>
-</section>
-
-<!-- 7. TESTIMONIOS -->
-<section style="padding: clamp(64px, 8vw, 104px) 24px; background: linear-gradient(180deg, #E4C9B9 0%, #F7EFEA 100%);">
-<div style="max-width: 1100px; margin: 0 auto; text-align: center;">
-<h2 class="fl-rv" style="margin: 0 0 12px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: clamp(34px, 4.4vw, 60px); line-height: 1.06; letter-spacing: -0.015em;">Ellas ya dieron el siguiente paso.</h2>
-<p class="fl-rv" style="margin: 0 auto 40px; max-width: 32em; color: #7B5C4C;">Testimonios reales de alumnas de Fun2Lash.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px;">
-<div class="fl-rv" style="position: relative; aspect-ratio: 9 / 13; border-radius: 999px; background: linear-gradient(170deg, #B9A195 0%, #7B5C4C 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: #F7EFEA; padding: 24px;">
-<span aria-hidden="true" style="width: 60px; height: 60px; border-radius: 50%; background: rgba(247, 239, 234, 0.25); border: 1px solid rgba(247, 239, 234, 0.6); display: flex; align-items: center; justify-content: center;"><svg viewBox="0 0 24 24" style="width: 22px; height: 22px; margin-left: 3px;"><path d="M7 4.5 v15 l13 -7.5 z" fill="#F7EFEA"></path></svg></span>
-<span style="font-size: 14px;">[Video testimonio real]</span>
-</div>
-<div class="fl-rv" style="position: relative; aspect-ratio: 9 / 13; border-radius: 999px; background: linear-gradient(170deg, #A37661 0%, #2A221E 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: #F7EFEA; padding: 24px;">
-<span aria-hidden="true" style="width: 60px; height: 60px; border-radius: 50%; background: rgba(247, 239, 234, 0.25); border: 1px solid rgba(247, 239, 234, 0.6); display: flex; align-items: center; justify-content: center;"><svg viewBox="0 0 24 24" style="width: 22px; height: 22px; margin-left: 3px;"><path d="M7 4.5 v15 l13 -7.5 z" fill="#F7EFEA"></path></svg></span>
-<span style="font-size: 14px;">[Video testimonio real]</span>
-</div>
-<div class="fl-rv" style="position: relative; aspect-ratio: 9 / 13; border-radius: 999px; background: linear-gradient(170deg, #B9A195 0%, #7B5C4C 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: #F7EFEA; padding: 24px;">
-<span aria-hidden="true" style="width: 60px; height: 60px; border-radius: 50%; background: rgba(247, 239, 234, 0.25); border: 1px solid rgba(247, 239, 234, 0.6); display: flex; align-items: center; justify-content: center;"><svg viewBox="0 0 24 24" style="width: 22px; height: 22px; margin-left: 3px;"><path d="M7 4.5 v15 l13 -7.5 z" fill="#F7EFEA"></path></svg></span>
-<span style="font-size: 14px;">[Video testimonio real]</span>
-</div>
-</div>
-</div>
-</section>
-
-<!-- 8. CIERRE -->
-<section id="reservar" class="fl-seda-oscura" style="padding: clamp(64px, 8vw, 112px) 24px; color: #E4C9B9;">
-<div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px clamp(32px, 5vw, 80px);">
-<div style="flex: 1 1 460px; min-width: 0;">
-<h2 class="fl-rv" style="margin: 0 0 20px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.8vw, 66px); line-height: 1.04; letter-spacing: -0.015em; color: #F7EFEA;">No esperes a sentirte perfecta para seguir creciendo.</h2>
-<p class="fl-rv" style="margin: 0; max-width: 30em;">La última masterclass del año: presencial, semipersonalizada y para artistas que ya están en el gremio. Tres fechas, cinco cupos por grupo.</p>
-</div>
-<div class="fl-rv" style="flex: 1 1 420px; min-width: 0; padding: clamp(28px, 4vw, 44px); border-radius: 32px; background: rgba(247, 239, 234, 0.08); border: 1px solid rgba(228, 201, 185, 0.25); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
-<dl style="margin: 0 0 22px; font-size: 15px;">
-<div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(228, 201, 185, 0.18);"><dt>Cejas, 26 y 27 nov.</dt><dd style="margin: 0; color: #F7EFEA;">$4.000.000</dd></div>
-<div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(228, 201, 185, 0.18);"><dt>Labios, 28 y 29 nov.</dt><dd style="margin: 0; color: #F7EFEA;">$4.000.000</dd></div>
-<div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(228, 201, 185, 0.18);"><dt>Brow &amp; Lash Repair, 30 nov.</dt><dd style="margin: 0; color: #F7EFEA;">$2.500.000</dd></div>
-<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 14px 0 0;"><dt style="font-weight: 700; color: #F7EFEA;">Combo completo</dt><dd style="margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-size: 30px; color: #F7EFEA;">$8.000.000</dd></div>
+<div class="fl-invest fl-rv">
+<span class="fl-save">AHORRAS $2.500.000</span>
+<h3>Tu inversión en el combo</h3>
+<dl>
+<div><dt>Cejas hiperrealistas</dt><dd><s>$5.000.000</s>$4.000.000</dd></div>
+<div><dt>Micropigmentación de labios</dt><dd><s>$5.000.000</s>$4.000.000</dd></div>
+<div><dt>Brow &amp; Lash Repair</dt><dd><s>$2.500.000</s><em>GRATIS</em></dd></div>
 </dl>
-<a href="https://wa.me/57XXXXXXXXXX?text=Hola%20Carolina%2C%20quiero%20reservar%20mi%20cupo%20en%20la%20Masterclass" class="fl-btn" style="display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 58px; padding: 0 24px; border-radius: 999px; background: linear-gradient(135deg, #F7EFEA, #E4C9B9); color: #2A221E; font-size: 15px; font-weight: 700; text-decoration: none; text-align: center;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px;"><path d="M4 20 l1.3 -4.2 A8 8 0 1 1 8.4 18.9 Z" fill="none" stroke="#2A221E" stroke-width="1.7" stroke-linejoin="round"></path></svg>Reservar mi cupo por WhatsApp</a>
-<p style="margin: 14px 0 0; font-size: 13px; color: #B9A195; text-align: center;">Valores en COP. Cupos sujetos a disponibilidad de cada grupo.</p>
+<p class="fl-invest-label">TOTAL POR LOS TRES CURSOS</p>
+<p class="fl-invest-total">$8.000.000 <small>COP</small></p>
+<p class="fl-invest-note">A precio habitual los tres cursos suman <strong>$10.500.000</strong>. En esta edición pagas <strong>$8.000.000 COP</strong>.</p>
+<a href="#reservar" class="fl-btn fl-pill fl-pill-gold" data-curso="Combo completo" style="width: 100%;">Quiero el combo completo</a>
+<p class="fl-invest-foot">Solo 5 cupos por capacitación. Sujeto a disponibilidad de cada grupo.</p>
+</div>
+</div>
+</section>
+
+<!-- 6. QUÉ INCLUYE -->
+<section id="incluye" class="fl-sec" style="background: #F6EEE6;">
+<div class="fl-wrap">
+<div class="fl-head-c fl-rv">
+<p class="fl-eyebrow">QUÉ INCLUYE</p>
+<h2 class="fl-h2">Técnica, materiales, negocio y seis meses de acompañamiento.</h2>
+<p class="fl-five"><span class="fl-seats" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Máximo 5 alumnas por grupo: ves de cerca, practicas y te corrigen mientras trabajas.</p>
+</div>
+<div class="fl-cols">
+<div class="fl-col fl-rv"><p class="fl-col-k">EN EL AULA</p>
+<h3>Demostración en vivo</h3><p>Ves el procedimiento completo y entiendes cada decisión técnica.</p>
+<h3>Práctica en plantilla</h3><p>Afinas los detalles antes de pasar a la modelo.</p>
+<h3>Práctica en modelo real</h3><p>Haces el procedimiento con orientación todo el tiempo.</p></div>
+<div class="fl-col fl-rv"><p class="fl-col-k">MATERIALES</p>
+<h3>Materiales para las prácticas</h3><p>Los que necesitas durante el curso.</p>
+<h3>Guía de proveedores</h3><p>Dónde comprar los insumos para tu trabajo.</p>
+<h3>Asesoría en insumos</h3><p>Elige tus materiales sin gastar de más.</p></div>
+<div class="fl-col fl-rv"><p class="fl-col-k">TU NEGOCIO</p>
+<h3>Fotografía y contenido</h3><p>Fotografía tus procedimientos y edita videos que muestren tu nivel.</p>
+<h3>Marketing y ventas</h3><p>Comunica el valor de tu trabajo y vende tus tratamientos con seguridad.</p></div>
+<div class="fl-col fl-rv"><p class="fl-col-k">DESPUÉS DEL CURSO</p>
+<p class="fl-big6">6</p>
+<h3>Meses de acompañamiento</h3><p>Sigues consultando a Carolina mientras aplicas lo aprendido con tus clientas.</p></div>
+</div>
+</div>
+</section>
+
+<!-- 7. CAROLINA -->
+<section id="carolina" class="fl-sec" style="background: #ECD3CB;">
+<div class="fl-wrap fl-split">
+<div class="fl-caro-photo fl-rv">
+<img loading="lazy" src="img/carolina-retrato.webp" alt="Retrato de Carolina, formadora de la masterclass">
+<p class="fl-caro-name" aria-hidden="true">Carolina</p>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; max-width: 560px;">
+<p class="fl-eyebrow fl-rv">QUIÉN TE VA A FORMAR</p>
+<h2 class="fl-h2 fl-rv">Aprende con una artista que sigue puliendo cada detalle.</h2>
+<p class="fl-quote fl-rv">“Me apasionan los detalles que cambian un resultado.”</p>
+<p class="fl-rv" style="margin: 0 0 12px; color: #5E4639;">Creé esta formación para artistas que ya están en el gremio y quieren dar el siguiente paso. Te comparto lo que he aprendido en cabina para que construyas tu propio criterio.</p>
+<p class="fl-rv" style="margin: 0 0 24px; color: #5E4639;">Si tienes el talento y las ganas, quiero acompañarte.</p>
+<div class="fl-years fl-rv"><span>15</span>AÑOS COMO MICROPIGMENTADORA</div>
+<img class="fl-rv" src="img/logo-fun2lash.png" alt="Fun2Lash" style="display: block; height: 52px; width: auto; margin-top: 18px;">
+</div>
+</div>
+</section>
+
+<!-- 8. RESULTADOS -->
+<section id="resultados" class="fl-sec" style="background: #F6EEE6;">
+<div class="fl-wrap">
+<div class="fl-head-c fl-rv">
+<p class="fl-eyebrow">RESULTADOS REALES</p>
+<h2 class="fl-h2">Así trabajamos en nuestra cabina.</h2>
+<p style="margin: 0; color: #7B5C4C;">Fotos sin filtro de procedimientos de Carolina.</p>
+</div>
+<figure class="fl-ba fl-rv">
+<div><img loading="lazy" src="img/antes.webp" alt="Cejas antes del procedimiento" width="620" height="576"><span>ANTES</span></div>
+<div><img loading="lazy" src="img/despues.webp" alt="Cejas después de la micropigmentación hiperrealista" width="618" height="576"><span class="is-after">DESPUÉS</span></div>
+<figcaption>Micropigmentación de cejas hiperrealista</figcaption>
+</figure>
+<div class="fl-gallery">
+<figure class="fl-rv"><img loading="lazy" src="img/res-labios.webp" alt="Labios antes y después" width="538" height="720"><figcaption>Labios, antes y después</figcaption></figure>
+<figure class="fl-rv"><img loading="lazy" src="img/res-color.webp" alt="Labios con color parejo y bordes definidos" width="540" height="720"><figcaption>Color parejo y bordes definidos</figcaption></figure>
+<figure class="fl-rv"><img loading="lazy" src="img/res-cejas.webp" alt="Cejas y labios en la misma clienta" width="540" height="720"><figcaption>Cejas y labios en la misma clienta</figcaption></figure>
 </div>
 </div>
 </section>
 
 <!-- 9. PREGUNTAS -->
-<section id="preguntas" style="padding: clamp(56px, 7vw, 96px) 24px; background: #F7EFEA;">
-<div style="max-width: 820px; margin: 0 auto;">
-<h2 class="fl-rv" style="margin: 0 0 28px; text-align: center; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-style: italic; font-size: clamp(32px, 4vw, 52px); line-height: 1.1;">Preguntas frecuentes</h2>
-<div style="display: flex; flex-direction: column; gap: 10px;">
-<details class="fl-faq fl-rv" style="border-radius: 18px; background: linear-gradient(135deg, #7B5C4C, #5E4639); color: #F7EFEA;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 60px; padding: 12px 24px; font-size: 16px; font-weight: 700;">¿Es para principiantes?<span class="fl-plus" aria-hidden="true" style="flex: none; font-size: 26px; font-weight: 400;">+</span></summary><p style="margin: 0; padding: 0 24px 20px; font-size: 15px; color: #F7EFEA;">No. Es para artistas que ya realizan micropigmentación y quieren perfeccionar su técnica.</p></details>
-<details class="fl-faq fl-rv" style="border-radius: 18px; background: linear-gradient(135deg, #7B5C4C, #5E4639); color: #F7EFEA;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 60px; padding: 12px 24px; font-size: 16px; font-weight: 700;">¿Cuántas alumnas hay por grupo?<span class="fl-plus" aria-hidden="true" style="flex: none; font-size: 26px; font-weight: 400;">+</span></summary><p style="margin: 0; padding: 0 24px 20px; font-size: 15px; color: #F7EFEA;">Máximo cinco por capacitación, para que tengas espacio de preguntar y practicar.</p></details>
-<details class="fl-faq fl-rv" style="border-radius: 18px; background: linear-gradient(135deg, #7B5C4C, #5E4639); color: #F7EFEA;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 60px; padding: 12px 24px; font-size: 16px; font-weight: 700;">¿Practicaré en una persona real?<span class="fl-plus" aria-hidden="true" style="flex: none; font-size: 26px; font-weight: 400;">+</span></summary><p style="margin: 0; padding: 0 24px 20px; font-size: 15px; color: #F7EFEA;">Sí. Primero en plantilla y luego en modelo real, según la organización de cada capacitación.</p></details>
-<details class="fl-faq fl-rv" style="border-radius: 18px; background: linear-gradient(135deg, #7B5C4C, #5E4639); color: #F7EFEA;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 60px; padding: 12px 24px; font-size: 16px; font-weight: 700;">¿Qué incluye el acompañamiento?<span class="fl-plus" aria-hidden="true" style="flex: none; font-size: 26px; font-weight: 400;">+</span></summary><p style="margin: 0; padding: 0 24px 20px; font-size: 15px; color: #F7EFEA;">Seis meses posteriores al curso. Los canales y las condiciones se informan antes de la inscripción.</p></details>
-<details class="fl-faq fl-rv" style="border-radius: 18px; background: linear-gradient(135deg, #7B5C4C, #5E4639); color: #F7EFEA;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 60px; padding: 12px 24px; font-size: 16px; font-weight: 700;">¿Puedo tomar solo una capacitación?<span class="fl-plus" aria-hidden="true" style="flex: none; font-size: 26px; font-weight: 400;">+</span></summary><p style="margin: 0; padding: 0 24px 20px; font-size: 15px; color: #F7EFEA;">Sí. Cejas o labios cuestan $4.000.000 COP cada una. Con las dos, Brow &amp; Lash Repair va de regalo.</p></details>
-<details class="fl-faq fl-rv" style="border-radius: 18px; background: linear-gradient(135deg, #7B5C4C, #5E4639); color: #F7EFEA;"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 60px; padding: 12px 24px; font-size: 16px; font-weight: 700;">¿Cómo reservo mi cupo?<span class="fl-plus" aria-hidden="true" style="flex: none; font-size: 26px; font-weight: 400;">+</span></summary><p style="margin: 0; padding: 0 24px 20px; font-size: 15px; color: #F7EFEA;">Escríbenos por WhatsApp: te confirmamos la disponibilidad, las condiciones de pago y el proceso de reserva.</p></details>
+<section id="preguntas" class="fl-sec" style="background: #F6EEE6; padding-top: 0;">
+<div class="fl-wrap fl-split" style="align-items: flex-start;">
+<div class="fl-rv" style="flex: 1 1 320px; min-width: 0; max-width: 380px;">
+<p class="fl-eyebrow">PREGUNTAS FRECUENTES</p>
+<h2 class="fl-h2">Antes de reservar.</h2>
+<p style="margin: 0 0 20px; color: #5E4639;">¿Tienes otra duda? Escríbenos al <strong>314 491 0376</strong> y te respondemos en persona.</p>
+<a class="fl-link" href="https://wa.me/573144910376?text=Hola%20Carolina%2C%20tengo%20una%20pregunta%20sobre%20la%20Masterclass" target="_blank" rel="noopener">Preguntar por WhatsApp <span aria-hidden="true">→</span></a>
+</div>
+<div class="fl-faqs" style="flex: 1 1 480px; min-width: 0;">
+<details class="fl-faq fl-rv"><summary>¿Sirve si estoy empezando desde cero?<span class="fl-plus" aria-hidden="true">+</span></summary><p>No. Es para artistas que ya hacen micropigmentación y quieren perfeccionar su técnica. No es una formación básica.</p></details>
+<details class="fl-faq fl-rv"><summary>¿Cuántas alumnas hay por curso?<span class="fl-plus" aria-hidden="true">+</span></summary><p>Máximo cinco por capacitación, para que tengas espacio de preguntar y practicar.</p></details>
+<details class="fl-faq fl-rv"><summary>¿Es presencial?<span class="fl-plus" aria-hidden="true">+</span></summary><p>Sí. Todas las capacitaciones son presenciales, con demostración en vivo y práctica guiada.</p></details>
+<details class="fl-faq fl-rv"><summary>¿Qué materiales incluye?<span class="fl-plus" aria-hidden="true">+</span></summary><p>Los materiales para las prácticas del curso, una guía de proveedores y asesoría para elegir tus insumos.</p></details>
+<details class="fl-faq fl-rv"><summary>¿Voy a practicar en una persona real?<span class="fl-plus" aria-hidden="true">+</span></summary><p>Sí. Primero en plantilla y luego en modelo real, según la organización de cada capacitación.</p></details>
+<details class="fl-faq fl-rv"><summary>¿Hay acompañamiento después del curso?<span class="fl-plus" aria-hidden="true">+</span></summary><p>Sí, seis meses. Los canales y las condiciones se informan antes de la inscripción.</p></details>
+<details class="fl-faq fl-rv"><summary>¿Puedo tomar una sola capacitación?<span class="fl-plus" aria-hidden="true">+</span></summary><p>Sí. Cejas o labios cuestan $4.000.000 COP cada una. Si tomas las dos, Brow &amp; Lash Repair va de regalo.</p></details>
+<details class="fl-faq fl-rv"><summary>¿Cómo reservo mi cupo?<span class="fl-plus" aria-hidden="true">+</span></summary><p>Llena el formulario de abajo o escríbenos por WhatsApp: te confirmamos disponibilidad, condiciones de pago y el proceso de reserva.</p></details>
 </div>
 </div>
 </section>
 
+<!-- 10. RESERVA -->
+<section id="reservar" class="fl-sec" style="background: #EFE0D2;">
+<div class="fl-wrap fl-split" style="align-items: flex-start;">
+<div class="fl-rv" style="flex: 1 1 420px; min-width: 0;">
+<p class="fl-eyebrow">ÚLTIMA EDICIÓN DE 2026</p>
+<h2 class="fl-h2">Aparta tu cupo para noviembre.</h2>
+<p style="margin: 0 0 10px;">Si llevas tiempo sintiendo que puedes hacer mejores cejas o mejores labios, esta es tu fecha.</p>
+<p style="margin: 0 0 24px; color: #7B5C4C; font-size: 15px;">No esperes a sentirte perfecta para seguir creciendo.</p>
+<ul class="fl-prices">
+<li><b>26 y 27 nov</b><span>Cejas hiperrealistas</span><strong>$4.000.000</strong></li>
+<li><b>28 y 29 nov</b><span>Micropigmentación de labios</span><strong>$4.000.000</strong></li>
+<li><b>30 nov</b><span>Brow &amp; Lash Repair</span><strong>$2.500.000</strong></li>
+<li class="is-combo"><b>26 al 30 nov</b><span>Combo con Brow &amp; Lash de regalo</span><strong>$8.000.000</strong></li>
+</ul>
+</div>
+<form class="fl-form fl-rv" id="fl-form" novalidate>
+<img src="img/logo-fun2lash.png" alt="Fun2Lash" style="display: block; height: 46px; width: auto; margin-bottom: 10px;">
+<h3>Reserva tu cupo</h3>
+<p class="fl-form-sub">Déjanos tus datos y te escribimos para confirmar disponibilidad y forma de pago.</p>
+<label for="fl-nombre">Nombre</label>
+<input id="fl-nombre" name="nombre" type="text" autocomplete="name" required>
+<label for="fl-wa">WhatsApp</label>
+<input id="fl-wa" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="300 123 4567" required>
+<fieldset><legend>¿Qué capacitación te interesa?</legend>
+<label class="fl-opt"><input type="radio" name="curso" value="Combo completo" checked><span>Combo completo</span><b>$8.000.000</b></label>
+<label class="fl-opt"><input type="radio" name="curso" value="Cejas hiperrealistas"><span>Cejas hiperrealistas</span><b>$4.000.000</b></label>
+<label class="fl-opt"><input type="radio" name="curso" value="Micropigmentación de labios"><span>Micropigmentación de labios</span><b>$4.000.000</b></label>
+<label class="fl-opt"><input type="radio" name="curso" value="Brow &amp; Lash Repair"><span>Brow &amp; Lash Repair</span><b>$2.500.000</b></label>
+</fieldset>
+<p class="fl-form-err" role="alert" hidden>Escribe tu nombre y tu WhatsApp para continuar.</p>
+<button type="submit" class="fl-btn fl-pill fl-pill-gold" style="width: 100%;">Reservar mi cupo en Fun2Lash</button>
+<a class="fl-btn fl-pill fl-pill-line" style="width: 100%; margin-top: 10px;" href="https://wa.me/573144910376?text=Hola%20Carolina%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20Masterclass" target="_blank" rel="noopener">Quiero más información por WhatsApp</a>
+<p class="fl-form-foot">Cinco alumnas por capacitación. Inscripciones sujetas a disponibilidad. Usamos tus datos solo para contactarte sobre esta masterclass.</p>
+</form>
+</div>
+</section>
+
 <!-- FOOTER -->
-<footer style="padding: 36px 24px 44px; background: #2A221E; color: #B9A195;">
-<div style="max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 14px;">
-<img src="img/logo-fun2lash-claro.png" alt="Fun2Lash" style="display: block; height: 48px; width: auto;">
-<span>[Instagram]&#160;&#160; [Ciudad y dirección]&#160;&#160; © 2026 Fun2Lash</span>
+<footer style="padding: 40px 24px; background: #2E2019; color: #E4C9B9;">
+<div class="fl-wrap fl-foot">
+<img src="img/logo-fun2lash-claro.png" alt="Fun2Lash" style="display: block; height: 52px; width: auto;">
+<nav aria-label="Enlaces del pie"><a href="https://instagram.com/fun2lash" target="_blank" rel="noopener">Instagram @fun2lash</a><a href="#reservar">Reservar cupo</a><a href="#inicio">Volver arriba</a></nav>
+<p>WhatsApp 314 491 0376 · © 2026 Fun2Lash</p>
 </div>
 </footer>
 
@@ -394,6 +498,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 
 </div>
 <script src="anim.js"></script>
+<script>
+/* Botones de cada curso: preseleccionan la opción en el formulario */
+document.querySelectorAll('[data-curso]').forEach(function(a){a.addEventListener('click',function(){var r=document.querySelector('.fl-form input[value="'+a.getAttribute('data-curso')+'"]');if(r)r.checked=true;});});
+/* Formulario: arma el mensaje y abre WhatsApp (no guarda datos) */
+(function(){var f=document.getElementById('fl-form');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();
+var n=f.nombre.value.trim(),w=f.whatsapp.value.trim(),c=(f.querySelector('input[name=curso]:checked')||{}).value||'';
+var err=f.querySelector('.fl-form-err');if(!n||!w){err.hidden=false;return;}err.hidden=true;
+var t='Hola Carolina, soy '+n+'. Quiero reservar mi cupo en: '+c+'. Mi WhatsApp es '+w+'.';
+window.open('https://wa.me/573144910376?text='+encodeURIComponent(t),'_blank','noopener');});})();
+</script>
 <script>
 /* Cuenta regresiva hasta la primera jornada (26 nov 2026, hora Colombia) */
 (function(){
