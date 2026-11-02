@@ -173,7 +173,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 .fl-photo-card .fl-arch::before{inset:-16px 16px 16px -16px}
 .fl-photo-card .fl-arch img{box-shadow:0 30px 60px -30px rgba(42,34,30,.5)}
 @media (max-width:760px){.fl-band{margin-top:72px}.fl-band-in{padding:0 0 40px;justify-content:center}.fl-photo-card{margin:-56px 0 0}.fl-photo-card .fl-arch{width:240px}}
-@media (min-width:1100px){.fl-band-title{white-space:nowrap}}
+.fl-band-txt{container-type:inline-size}
+.fl-band-title{white-space:nowrap;font-size:min(40px,calc(100cqw / 16.6))}
 /* Tarjeta de fechas */
 .fl-dnum{display:block;font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:32px;line-height:1;color:inherit}
 .fl-dmes{margin-left:6px;font-family:'Jost','Century Gothic',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;vertical-align:.35em;opacity:.8}
@@ -290,9 +291,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 <div class="fl-photo-card fl-rv"><div class="fl-arch">
 <img loading="lazy" src="img/carolina-clase.webp" alt="Carolina revisando el trabajo de una alumna durante una capacitación" width="706" height="884">
 </div></div>
-<div style="flex: 1 1 420px; min-width: 0; max-width: 660px;">
+<div class="fl-band-txt" style="flex: 1 1 420px; min-width: 0; max-width: 660px;">
 <p class="fl-rv" style="margin: 0 0 12px; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; color: #A37661;">LA MASTERCLASS</p>
-<h2 class="fl-rv fl-band-title" style="margin: 0 0 14px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: clamp(28px, 2.1vw, 40px); line-height: 1.05; letter-spacing: -0.02em;">Vienes a <span class="fl-mark-word">perfeccionar</span> lo que ya sabes.</h2>
+<h2 class="fl-rv fl-band-title" style="margin: 0 0 14px; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; line-height: 1.05; letter-spacing: -0.02em;">Vienes a <span class="fl-mark-word">perfeccionar</span> lo que ya sabes.</h2>
 <p class="fl-rv" style="margin: 0 0 22px; color: #5E4639;">Ves a Carolina trabajar en vivo, practicas en plantilla y en modelo real, y en grupos de cinco ella revisa tus trazos y te corrige en el momento.</p>
 <a href="#capacitaciones" class="fl-link fl-rv">Ver fechas y precios <span aria-hidden="true">→</span></a>
 </div>
