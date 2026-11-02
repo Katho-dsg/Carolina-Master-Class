@@ -43,7 +43,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 @media (prefers-reduced-motion:reduce){.fl-nav a,.fl-nav a::after{transition:none}}
 /* Sección ¿Te identificas? — globos de chat */
 .fl-chat{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px}
-.fl-bub{position:relative;max-width:78%;padding:16px 22px;border-radius:24px;background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.8);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 22px 50px -30px rgba(123,92,76,.55)}
+.fl-bub{position:relative;box-sizing:border-box;max-width:80%;padding:16px 22px;border-radius:24px;background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.8);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 22px 50px -30px rgba(123,92,76,.55)}
 .fl-bub p{margin:0;font-family:'DM Serif Display',Georgia,serif;font-size:clamp(19px,1.7vw,23px);line-height:1.22;color:#2A221E}
 .fl-bub::after{content:"";position:absolute;bottom:-9px;width:22px;height:14px;background:inherit;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .fl-bub-l{align-self:flex-start;border-bottom-left-radius:6px}
@@ -55,7 +55,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 .fl-bub-caro::after{background:#2A221E}
 .fl-bub-caro p{color:#F7EFEA}
 .fl-bub-name{display:block;margin-bottom:6px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#E4C9B9}
-@media (max-width:560px){.fl-bub{max-width:90%;padding:14px 18px}.fl-bub-caro{max-width:96%}}
+@media (max-width:560px){.fl-chat .fl-bub{max-width:min(86%, 300px);padding:14px 18px}.fl-chat .fl-bub-caro{max-width:96%}}
 /* Tarjeta de fechas */
 .fl-dnum{display:block;font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:32px;line-height:1;color:inherit}
 .fl-dmes{margin-left:6px;font-family:'Jost','Century Gothic',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;vertical-align:.35em;opacity:.8}
