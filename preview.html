@@ -185,8 +185,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 .fl-dmes{margin-left:6px;font-family:'Jost','Century Gothic',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;vertical-align:.35em;opacity:.8}
 .fl-dlab{display:block;margin-top:8px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7B5C4C;line-height:1.2}
 .fl-dates-grid li{color:#2A221E;transition:transform .25s ease}
+.fl-timer{flex:none;display:flex;align-items:flex-start;gap:4px;padding:0 24px 0 0;border-right:1px solid rgba(163,118,97,.28)}
+.fl-tu{min-width:46px;text-align:center}
+.fl-tn{display:block;font-family:'DM Serif Display',Georgia,serif;font-size:30px;line-height:1;color:#2A221E;font-variant-numeric:tabular-nums}
+.fl-tl{display:block;margin-top:6px;font-size:9.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#A37661}
+.fl-tsep{font-family:'DM Serif Display',Georgia,serif;font-size:24px;line-height:1.15;color:#C9A27E;animation:flBlink 1s steps(2,start) infinite}
+@keyframes flBlink{to{visibility:hidden}}
+@media (prefers-reduced-motion:reduce){.fl-tsep{animation:none}}
 .fl-dates-grid li:hover{transform:translateY(-3px)}
-@media (max-width:860px){.fl-dates{flex-direction:column;align-items:stretch!important;padding:18px!important}.fl-countdown br{display:none}}
+@media (max-width:860px){.fl-dates{flex-direction:column;align-items:stretch!important;padding:18px!important}.fl-countdown br{display:none}.fl-timer{border-right:0;padding:0;justify-content:flex-start}}
 @media (max-width:560px){.fl-dates-grid{gap:5px!important}.fl-dates-grid li{padding:10px 6px!important;text-align:center}.fl-dnum{font-size:22px}.fl-dmes{display:block;margin:3px 0 0;font-size:8.5px;letter-spacing:.08em;vertical-align:0}.fl-dlab{font-size:8.5px;letter-spacing:.06em;margin-top:5px}.fl-countdown{font-size:19px!important}}
 </style>
 <style>html{scroll-behavior:smooth}section[id],#combo{scroll-margin-top:120px}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style>
@@ -238,15 +245,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 <div class="fl-dates-wrap" style="position: relative; z-index: 6; height: 0; padding: 0 24px;">
 <div class="fl-dates fl-hero-in" style="box-sizing: border-box; max-width: 1140px; margin: 0 auto; transform: translateY(-50%); display: flex; align-items: center; gap: 16px 28px; padding: 18px 20px 18px 28px; border-radius: 24px; background: #FFFAF5; box-shadow: 0 30px 60px -28px rgba(42, 34, 30, 0.45), 0 2px 6px rgba(42, 34, 30, 0.06);">
 <div class="fl-dates-txt" style="flex: none;">
-<p style="margin: 0 0 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.22em; color: #A37661;">NOVIEMBRE 2026</p>
-<p class="fl-countdown" style="margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.15; color: #2A221E;">Faltan <span class="fl-days">24</span> días para <br>la primera jornada</p>
+<p style="margin: 0 0 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.22em; color: #A37661;">ENERO 2027</p>
+<p class="fl-countdown" style="margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.15; color: #2A221E;">Faltan <span class="fl-days">79</span> días para <br>la primera jornada</p>
 </div>
+<div class="fl-timer" role="timer" aria-label="Cuenta regresiva para la primera jornada"><span class="fl-tu"><span class="fl-tn" data-t="d">79</span><span class="fl-tl">Días</span></span><span class="fl-tsep" aria-hidden="true">:</span><span class="fl-tu"><span class="fl-tn" data-t="h">00</span><span class="fl-tl">Horas</span></span><span class="fl-tsep" aria-hidden="true">:</span><span class="fl-tu"><span class="fl-tn" data-t="m">00</span><span class="fl-tl">Min</span></span><span class="fl-tsep" aria-hidden="true">:</span><span class="fl-tu"><span class="fl-tn" data-t="s">00</span><span class="fl-tl">Seg</span></span></div>
 <ol class="fl-dates-grid" aria-label="Fechas de la masterclass" style="flex: 1; min-width: 0; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px;">
-<li style="padding: 14px 16px; border-radius: 16px; background: #F0DFCF;"><span class="fl-dnum">26<small class="fl-dmes">NOV</small></span><span class="fl-dlab">Cejas</span></li>
-<li style="padding: 14px 16px; border-radius: 16px; background: #F0DFCF;"><span class="fl-dnum">27<small class="fl-dmes">NOV</small></span><span class="fl-dlab">Cejas</span></li>
-<li style="padding: 14px 16px; border-radius: 16px; background: #ECD0C9;"><span class="fl-dnum">28<small class="fl-dmes">NOV</small></span><span class="fl-dlab">Labios</span></li>
-<li style="padding: 14px 16px; border-radius: 16px; background: #ECD0C9;"><span class="fl-dnum">29<small class="fl-dmes">NOV</small></span><span class="fl-dlab">Labios</span></li>
-<li style="padding: 14px 16px; border-radius: 16px; background: #2E2019; color: #F7EFEA;"><span class="fl-dnum">30<small class="fl-dmes">NOV</small></span><span class="fl-dlab" style="color: #E4C9B9;">Brow &amp; Lash</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #F0DFCF;"><span class="fl-dnum">25<small class="fl-dmes">ENE</small></span><span class="fl-dlab">Cejas</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #F0DFCF;"><span class="fl-dnum">26<small class="fl-dmes">ENE</small></span><span class="fl-dlab">Cejas</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #ECD0C9;"><span class="fl-dnum">27<small class="fl-dmes">ENE</small></span><span class="fl-dlab">Labios</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #ECD0C9;"><span class="fl-dnum">28<small class="fl-dmes">ENE</small></span><span class="fl-dlab">Labios</span></li>
+<li style="padding: 14px 16px; border-radius: 16px; background: #2E2019; color: #F7EFEA;"><span class="fl-dnum">29<small class="fl-dmes">ENE</small></span><span class="fl-dlab" style="color: #E4C9B9;">Brow &amp; Lash Repair</span></li>
 </ol>
 </div>
 </div>
@@ -521,17 +529,25 @@ var t='Hola Carolina, soy '+n+'. Quiero reservar mi cupo en: '+c+'. Mi WhatsApp 
 window.open('https://wa.me/573144910376?text='+encodeURIComponent(t),'_blank','noopener');});})();
 </script>
 <script>
-/* Cuenta regresiva hasta la primera jornada (26 nov 2026, hora Colombia) */
+/* Cuenta regresiva hasta la primera jornada (25 ene 2027, hora Colombia) */
 (function(){
   var el=document.querySelector('.fl-countdown'); if(!el) return;
-  var start=Date.UTC(2026,10,26,5), end=Date.UTC(2026,11,1,5); /* 00:00 en Bogotá */
-  var now=Date.now(), day=864e5;
-  var hoy=Math.floor((now-5*36e5)/day), ini=Math.floor((start-5*36e5)/day);
-  var n=ini-hoy;
-  if(n>1) el.innerHTML='Faltan <span class="fl-days">'+n+'</span> días para <br>la primera jornada';
-  else if(n===1) el.innerHTML='Falta <span class="fl-days">1</span> día para <br>la primera jornada';
-  else if(now<end) el.innerHTML='¡La masterclass <br>ya comenzó!';
-  else el.innerHTML='Edición 2026 <br>finalizada';
+  var start=Date.UTC(2027,0,25,5), end=Date.UTC(2027,0,30,5); /* 00:00 en Bogotá */
+  var tm=document.querySelector('.fl-timer'), q=function(k){return tm&&tm.querySelector('[data-t="'+k+'"]');};
+  var D=q('d'),H=q('h'),M=q('m'),S=q('s'), pad=function(x){return (x<10?'0':'')+x;};
+  function tick(){
+    var now=Date.now(), r=Math.max(0,Math.floor((start-now)/1000)), n=Math.floor(r/86400);
+    if(n>1) el.innerHTML='Faltan <span class="fl-days">'+n+'</span> días para <br>la primera jornada';
+    else if(n===1) el.innerHTML='Falta <span class="fl-days">1</span> día para <br>la primera jornada';
+    else if(r>0) el.innerHTML='¡Menos de un día para <br>la primera jornada!';
+    else if(now<end) el.innerHTML='¡La masterclass <br>ya comenzó!';
+    else el.innerHTML='Edición 2027 <br>finalizada';
+    if(!tm) return;
+    if(r===0){tm.style.display='none';return;}
+    D.textContent=Math.floor(r/86400); H.textContent=pad(Math.floor(r%86400/3600));
+    M.textContent=pad(Math.floor(r%3600/60)); S.textContent=pad(r%60);
+  }
+  tick(); setInterval(tick,1000);
 })();
 </script>
 <script>
