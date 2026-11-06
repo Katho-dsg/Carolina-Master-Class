@@ -180,6 +180,18 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 @media (max-width:760px){.fl-band{margin-top:72px}.fl-band-in{padding:0 0 40px;justify-content:center}.fl-photo-card{margin:-56px 0 0}.fl-photo-card .fl-arch{width:220px}}
 .fl-band-txt{container-type:inline-size}
 .fl-band-title{white-space:nowrap;font-size:min(32px,calc(100cqw / 16.6))}
+/* Videos verticales (formato celular) */
+.fl-phones{display:flex;justify-content:center;align-items:center;gap:clamp(16px,2.2vw,32px);max-width:880px;margin:0 auto;padding-top:22px}
+.fl-phone{position:relative;flex:0 0 auto;width:clamp(200px,17vw,260px);aspect-ratio:9/16;border-radius:30px;overflow:hidden;background:#3A2E28;border:6px solid #1E1714;box-shadow:0 40px 90px -36px rgba(163,118,97,.7),0 0 0 1px rgba(228,201,185,.2);transition:transform .35s cubic-bezier(.22,.7,.2,1)}
+.fl-phone:nth-child(2){transform:translateY(-18px)}
+.fl-phone:hover{transform:translateY(-6px)}.fl-phone:nth-child(2):hover{transform:translateY(-24px)}
+.fl-phone img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fl-phone::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,34,30,.35) 0%,rgba(42,34,30,0) 30%,rgba(42,34,30,0) 55%,rgba(42,34,30,.85) 100%);pointer-events:none}
+.fl-phone-notch{position:absolute;z-index:2;top:9px;left:50%;transform:translateX(-50%);width:34%;height:18px;border-radius:999px;background:#1E1714}
+.fl-phone-play{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:60px;height:60px;border-radius:50%;border:0;background:linear-gradient(135deg,#F7EFEA,#E4C9B9);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 0 0 8px rgba(228,201,185,.18)}
+.fl-phone-play svg{width:36%;height:36%;margin-left:6%}
+.fl-phone-cap{position:absolute;z-index:2;left:16px;right:16px;bottom:16px;margin:0;text-align:left;font-size:12px;color:#F7EFEA}
+@media (max-width:760px){.fl-phones{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;padding:24px 24px 8px;margin:0 -24px;scrollbar-width:none}.fl-phones::-webkit-scrollbar{display:none}.fl-phone{width:62vw;max-width:240px;scroll-snap-align:center}.fl-phone:nth-child(2),.fl-phone:nth-child(2):hover,.fl-phone:hover{transform:none}}
 /* Tarjeta de fechas */
 .fl-dnum{display:block;font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:32px;line-height:1;color:inherit}
 .fl-dmes{margin-left:6px;font-family:'Jost','Century Gothic',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;vertical-align:.35em;opacity:.8}
@@ -194,6 +206,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 @media (prefers-reduced-motion:reduce){.fl-tsep{animation:none}}
 .fl-dates-grid li:hover{transform:translateY(-3px)}
 @media (max-width:860px){.fl-dates{flex-direction:column;align-items:stretch!important;padding:18px!important}.fl-countdown br{display:none}.fl-timer{border-right:0;padding:0;justify-content:flex-start}}
+@media (max-width:860px){#video{padding-top:calc(clamp(40px,4vw,64px) + 142px)!important}}
 @media (max-width:560px){.fl-dates-grid{gap:5px!important}.fl-dates-grid li{padding:10px 6px!important;text-align:center}.fl-dnum{font-size:22px}.fl-dmes{display:block;margin:3px 0 0;font-size:8.5px;letter-spacing:.08em;vertical-align:0}.fl-dlab{font-size:8.5px;letter-spacing:.06em;margin-top:5px}.fl-countdown{font-size:19px!important}}
 </style>
 <style>html{scroll-behavior:smooth}section[id],#combo{scroll-margin-top:120px}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style>
@@ -263,13 +276,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #A3
 <section id="video" class="fl-seda-oscura" style="position: relative; padding: calc(clamp(40px, 4vw, 64px) + 64px) 24px clamp(48px, 5vw, 72px); color: #E4C9B9; text-align: center;">
 <div style="max-width: 680px; margin: 0 auto;">
 <p class="fl-rv" style="margin: 0 0 8px; font-size: 14px; color: #B9A195;">Antes de elegir tu capacitación</p>
-<h2 class="fl-rv" style="margin: 0 auto 24px; max-width: 20em; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.12; letter-spacing: -0.01em; color: #F7EFEA;">Mira este video. Te explico por qué esta masterclass es diferente.</h2>
-<div class="fl-rv fl-video" style="position: relative; aspect-ratio: 16 / 9; border-radius: 22px; overflow: hidden; background: #3A2E28; box-shadow: 0 50px 120px -40px rgba(163, 118, 97, 0.65), 0 0 0 1px rgba(228, 201, 185, 0.18);">
-<img src="img/video-portada.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
-<div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(42, 34, 30, 0.85) 0%, rgba(42, 34, 30, 0.35) 55%, rgba(42, 34, 30, 0.1) 100%);"></div>
-<button type="button" aria-label="Reproducir el video de Carolina" class="fl-play" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: clamp(60px, 6vw, 84px); height: clamp(60px, 6vw, 84px); border-radius: 50%; border: 0; background: linear-gradient(135deg, #F7EFEA, #E4C9B9); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 0 0 10px rgba(228, 201, 185, 0.18);"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 36%; height: 36%; margin-left: 6%;"><path d="M7 4.5 v15 l13 -7.5 z" fill="#2A221E"></path></svg></button>
-<p style="position: absolute; left: clamp(16px, 3vw, 32px); bottom: clamp(14px, 2.5vw, 28px); margin: 0; max-width: 34%; text-align: left; font-size: 13px; color: #F7EFEA;">[Link del video]</p>
+<h2 class="fl-rv" style="margin: 0 auto 24px; max-width: 20em; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.12; letter-spacing: -0.01em; color: #F7EFEA;">Mira estos videos. Te explico por qué esta masterclass es diferente.</h2>
 </div>
+<div class="fl-rv fl-phones" role="list" aria-label="Videos de Carolina">
+<div class="fl-phone" role="listitem"><img src="img/video-portada.webp" alt="" loading="lazy" style="object-position: center 30%;"><span class="fl-phone-notch" aria-hidden="true"></span><button type="button" class="fl-play fl-phone-play" aria-label="Reproducir el video 1 de Carolina"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5 v15 l13 -7.5 z" fill="#2A221E"></path></svg></button><p class="fl-phone-cap">[Link del video 1]</p></div>
+<div class="fl-phone" role="listitem"><img src="img/carolina-clase.webp" alt="" loading="lazy" style="object-position: center 30%;"><span class="fl-phone-notch" aria-hidden="true"></span><button type="button" class="fl-play fl-phone-play" aria-label="Reproducir el video 2 de Carolina"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5 v15 l13 -7.5 z" fill="#2A221E"></path></svg></button><p class="fl-phone-cap">[Link del video 2]</p></div>
+<div class="fl-phone" role="listitem"><img src="img/cap-cejas.webp" alt="" loading="lazy" style="object-position: center;"><span class="fl-phone-notch" aria-hidden="true"></span><button type="button" class="fl-play fl-phone-play" aria-label="Reproducir el video 3 de Carolina"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5 v15 l13 -7.5 z" fill="#2A221E"></path></svg></button><p class="fl-phone-cap">[Link del video 3]</p></div>
+</div>
+<div style="max-width: 680px; margin: 0 auto;">
 <div class="fl-rv" style="margin-top: 24px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
 <a href="#capacitaciones" class="fl-btn" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 30px; border-radius: 999px; background: linear-gradient(135deg, #F7EFEA, #E4C9B9); color: #2A221E; font-size: 15px; font-weight: 700; text-decoration: none; box-shadow: 0 18px 50px -20px rgba(228, 201, 185, 0.6);">Quiero llevar mi técnica al siguiente nivel</a>
 <p style="margin: 0; font-size: 14px; color: #B9A195;">Cupos limitados a 5 alumnas por capacitación</p>
